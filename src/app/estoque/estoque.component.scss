@@ -1,0 +1,26 @@
+.content {
+  margin: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  button{
+    align-self: flex-end;
+    width: 200px;
+  }
+}

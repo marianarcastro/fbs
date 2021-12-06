@@ -1,0 +1,23 @@
+.form-inputs {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+.input {
+    padding-right: 10px;
+    width: 100%;
+    .mat-form-field {
+        width: 100%;
+    }
+}
+
+.dialog {
+    width: 80%;
+}

@@ -1,0 +1,43 @@
+<div class="content">
+  <mat-card class="form">
+    <mat-card-title class="form-inputs">Cadastro de Cliente</mat-card-title>
+
+    <mat-card-content class="form-inputs">
+      <mat-form-field class="input" appearance="legacy">
+        <input name="nome" matInput placeholder="Nome" required>
+        <mat-error>O nome é obrigatório!</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input" appearance="legacy">
+        <input name="sobrenome" matInput placeholder="Sobrenome" required>
+        <mat-error>O sobrenome é obrigatório!</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input" appearance="legacy">
+        <input name="endereco" matInput placeholder="Endereço" required>
+        <mat-error>O endereço é obrigatório!</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input" appearance="legacy">
+        <input name="celular" matInput placeholder="Celular" required>
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint>Include area code</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="input" appearance="legacy">
+        <input name="CPF" matInput placeholder="CPF" >
+      </mat-form-field>
+
+      <mat-form-field class="input" appearance="legacy">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+
+      <div class="input">
+        <button mat-button color="primary">Salvar</button>
+      </div>
+
+
+    </mat-card-content>
+  </mat-card>
+</div>

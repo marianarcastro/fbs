@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    button{
+      align-self: flex-end;
+      width: 200px;
+    }
+}

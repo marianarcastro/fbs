@@ -1,0 +1,80 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'side'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+      menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+      close
+    </mat-icon>
+  </button>
+  <h2 style="margin-right: 200px;">FBC - Financial</h2>
+
+  <button class="itemMenu" mat-button [matMenuTriggerFor]="appCliente">Cliente</button>
+  <mat-menu #appCliente="matMenu" xPosition="before" yPosition="below">
+    <button mat-menu-item routerLink="/cliente">Cadastro de Cliente</button>
+    <button mat-menu-item>Visualizar Cliente</button>
+  </mat-menu>
+
+  <button class="itemMenu" mat-button [matMenuTriggerFor]="appVenda">Vendas</button>
+  <mat-menu #appVenda="matMenu" xPosition="before" yPosition="below">
+    <button mat-menu-item>Nova Venda</button>
+    <button mat-menu-item>Visualizar Vendas</button>
+  </mat-menu>
+
+  <button class="itemMenu" mat-button [matMenuTriggerFor]="appEstoque">Estoque</button>
+  <mat-menu #appEstoque="matMenu" xPosition="before" yPosition="below">
+    <button mat-menu-item routerLink="/estoque">Visualizar Estoque</button>
+    <button mat-menu-item routerLink="/estoque">Cadastro de Categoria</button>
+  </mat-menu>
+
+  <button class="itemMenu" mat-button [matMenuTriggerFor]="appRelatorio">Relatório</button>
+  <mat-menu #appRelatorio="matMenu" xPosition="before" yPosition="below">
+    <button mat-menu-item routerLink="/produto">Vendas Diárias</button>
+    <button mat-menu-item routerLink="/estoque">Vendas Mensais</button>
+    <button mat-menu-item routerLink="/estoque">Insumos</button>
+    <button mat-menu-item routerLink="/estoque">Estoque</button>
+    <button mat-menu-item routerLink="/estoque">Metas</button>
+  </mat-menu>
+
+  <button class="logo" color="white" mat-fab>
+    <img class="png-icon" src="../../assets/LOGO VETOR DOURADA.png" style="width: 55px; height: 27px;">
+  </button>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+    <img class="avatar mat-elevation-z8" src="../../assets/LOGO VETOR DOURADA.png" style="width: 90px; height: 90px;"/>
+
+    <h4 class="name">iPhone Plaza</h4>
+    <p class="designation">Venda de Smartphones</p>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/">
+      <mat-icon>analytics</mat-icon>
+      <span>Painel</span>
+      
+    </button>
+    
+    <button mat-button class="menu-button" routerLink="/estoque">
+      <mat-icon>assignment</mat-icon>
+      <span>Estoque</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/venda">
+      <mat-icon>attach_money</mat-icon>
+      <span>Vendas</span>
+    </button>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

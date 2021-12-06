@@ -1,1 +1,55 @@
+@use '~@angular/material' as mat;
+
+@include mat.core();
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$FBC-Financial-primary: mat.define-palette(mat.$indigo-palette);
+$FBC-Financial-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$FBC-Financial-warn: mat.define-palette(mat.$red-palette);
+
+$FBC-Financial-theme: mat.define-light-theme((
+  color: (
+    primary: $FBC-Financial-primary,
+    accent: $FBC-Financial-accent,
+    warn: $FBC-Financial-warn,
+  )
+));
+
+@include mat.all-component-themes($FBC-Financial-theme);
+
+/*
+$app-typography: mat-typography-config(
+  $font-family: '"Open Sans", "Helvetica Neue"'
+);
+@include angular-material-typography($app-typography); */
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Open Sans', 'Roboto', sans-serif; }
+
+
+.content {
+  height: calc(100vh - 85px);
+  border-radius: 10px;
+  margin: 10px;
+  margin-left: 12px;
+  display: flow-root;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+}
+.form {
+  height: calc(100vh - 90px);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}

@@ -1,0 +1,76 @@
+<h1 mat-dialog-title style="text-align: center;">Novo Produto</h1>
+<div mat-dialog-content>
+
+  <div class="dialog">
+    <div class="form-inputs">
+      <div class="column">
+        <mat-form-field class="input" appearance="legacy">
+          <input name="nome" matInput placeholder="Nome" required>
+          <mat-error>O nome é obrigatório!</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input" appearance="legacy">
+          <input matInput placeholder="Categoria">
+        </mat-form-field>
+
+        <mat-form-field class="input" appearance="legacy">
+          <input matInput placeholder="Marca">
+        </mat-form-field>
+
+        <mat-form-field class="input" appearance="legacy">
+          <input matInput placeholder="Filial">
+        </mat-form-field>
+
+        <mat-form-field class="input" appearance="legacy">
+          <mat-label>Quantidade em Estoque</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0">
+        </mat-form-field>
+      </div>
+      <div class="column">
+        <mat-form-field class="input" appearance="legacy" floatLabel="always">
+          <mat-label>Custo Unitário</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0">
+          <span matPrefix>R$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+
+        <mat-form-field class="input" appearance="legacy" floatLabel="always">
+          <mat-label>Custo Total</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0">
+          <span matPrefix>R$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+
+        <mat-form-field class="input" appearance="legacy" floatLabel="always">
+          <mat-label>Valor de Venda</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0">
+          <span matPrefix>R$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+
+        <mat-form-field class="input" appearance="legacy" floatLabel="always">
+          <mat-label>Lucro</mat-label>
+          <input matInput type="number" class="example-right-align" placeholder="0">
+          <span matPrefix>R$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+
+        <mat-form-field class="input" appearance="legacy">
+          <input matInput placeholder="Fornecedor">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-inputs">
+      <mat-form-field class="input" appearance="legacy">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <div class="input">
+    <button mat-button color="primary">Salvar</button>
+  </div>
+  <button mat-button mat-dialog-close>Close</button>
+</div>
